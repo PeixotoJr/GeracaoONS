@@ -207,7 +207,8 @@ for aba, granularidade in zip(abas, granularidades):
 
         # --- Tabela agregada + export ---
         with st.expander("Ver / exportar dados agregados desta aba"):
-            st.dataframe(agg.sort_values("periodo"), use_container_width=True, hide_index=True)
+            st.dataframe(agg.sort_values("periodo"), width="stretch")
+            #st.dataframe(agg.sort_values("periodo"), use_container_width=True, hide_index=True)
             st.download_button(
                 "⬇️ Exportar dados agregados (CSV)",
                 data=to_csv_bytes(agg),
