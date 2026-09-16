@@ -194,7 +194,7 @@ for aba, granularidade in zip(abas, granularidades):
             cbar.plotly_chart(fig_bar, use_container_width=True)
             ctab.dataframe(
                 tot.rename(columns={"categoria": abertura_label})[[abertura_label, "GWh", "GWmed", "n_registros"]],
-                use_container_width=True,
+                width="stretch",
                 hide_index=True,
             )
             ctab.download_button(
